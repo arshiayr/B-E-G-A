@@ -1,7 +1,12 @@
-﻿function App() {
+﻿import Header from "./components/Header/Header";
+import "./App.css";
+
+function App() {
   return (
     <div className="bg-black h-screen flex flex-col overflow-hidden">
-      <h1 className="text-white text-3xl font-bold p-6">Spotify</h1>
+
+      <Header />
+
     </div>
   );
 }
