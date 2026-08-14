@@ -1,4 +1,5 @@
 ﻿import TrendingSongs from "./TrendingSongs/TrendingSongs";
+import PopularArtist from "./PopularArtist/PopularArtist"
 
 function Home() {
   return (
@@ -6,6 +7,9 @@ function Home() {
 
       <div className="flex-1">
         <TrendingSongs />
+      </div>
+      <div className="flex-1">
+        <PopularArtist />
       </div>
 
     </div>
