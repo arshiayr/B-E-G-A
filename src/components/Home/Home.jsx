@@ -1,5 +1,6 @@
-﻿import TrendingSongs from "./TrendingSongs/TrendingSongs";
+import TrendingSongs from "./TrendingSongs/TrendingSongs";
 import PopularArtist from "./PopularArtist/PopularArtist"
+import Footer from "./Footer/Footer";
 
 function Home() {
   return (
@@ -11,6 +12,8 @@ function Home() {
       <div className="flex-1">
         <PopularArtist />
       </div>
+
+      <Footer />
 
     </div>
   );
