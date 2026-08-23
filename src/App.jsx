@@ -2,24 +2,21 @@ import { Routes, Route } from "react-router-dom";
 
 import Header from "./components/Header/Header";
 import Sidebar from "./components/Sidebar/Sidebar";
-import Home from "./components/Home/Home";
+import Home from "./components/Pages/Home";
 import MusicPage from "./components/MusicPage/MusicPage";
+import Login from "./components/Pages/Login";
 
 import "./App.css";
 
 function App() {
   return (
     <div className="h-screen w-screen bg-black flex flex-col overflow-hidden">
-
       <Header />
 
-
       <div className="flex-1 min-h-0 flex gap-2 px-2 pb-2">
-
         <aside className="w-[420px] shrink-0 h-full">
           <Sidebar />
         </aside>
-
 
         <main
           className="
@@ -33,12 +30,12 @@ function App() {
           "
         >
           <Routes>
-
             <Route path="/" element={<Home />} />
 
-
+            <Route path="/login" element={<Login />} /> 
             <Route path="/music/:musicId" element={<MusicPage />} />
           </Routes>
+          
         </main>
       </div>
     </div>

@@ -111,7 +111,7 @@ function PopularArtist() {
                 duration-300
                 hover:scale-105
                 hover:bg-[#1fdf64]
-                zed-index
+                z-999
               "
               >
                 <IoMdPlay
