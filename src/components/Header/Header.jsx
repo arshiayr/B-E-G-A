@@ -1,11 +1,25 @@
 import { FaSpotify } from "react-icons/fa";
 import { SlArrowDownCircle } from "react-icons/sl";
 import { GoHomeFill } from "react-icons/go";
+import { Link } from "react-router-dom";
 
+const HeaderLinks = [
+  {
+    lable: "Premium",
+    href: "https://www.spotify.com/az-az/premium/",
+  },
+  {
+    lable: "Support",
+    href: "https://support.spotify.com/az-az/",
+  },
+  {
+    lable: "Download",
+    href: "https://spotify.com/download",
+  },
+];
 function Header() {
   return (
     <header className="w-full h-[64px] bg-black flex items-center px-2 gap-2">
-      
       <FaSpotify
         className="w-[40px] h-[40px] object-contain ml-2 mr-2"
         color="white"
@@ -23,7 +37,6 @@ function Header() {
         cursor-pointer
       "
         >
-          
           <GoHomeFill
             className="w-[24px] h-[24px] object-contain"
             color="white"
@@ -80,47 +93,22 @@ function Header() {
       </div>
 
       <div className="ml-auto flex items-center gap-6 pr-4">
-        <a
-          href="/"
-          className="
-        text-[#b3b3b3]
-        text-[14px]
-        font-bold
-        no-underline
-        hover:text-white
-        transition-colors
-      "
-        >
-          Premium
-        </a>
+        {HeaderLinks.map((link) => (
+          <a
+            href={link.href}
+            className="
+          text-[#b3b3b3]
+          text-[14px]
+          font-bold
+          no-underline
+          hover:text-white
+          transition-colors
+          "
+          >
+            {link.lable}
+          </a>
+        ))}
 
-        <a
-          href="/"
-          className="
-        text-[#b3b3b3]
-        text-[14px]
-        font-bold
-        no-underline
-        hover:text-white
-        transition-colors
-      "
-        >
-          Support
-        </a>
-
-        <a
-          href="/"
-          className="
-        text-[#b3b3b3]
-        text-[14px]
-        font-bold
-        no-underline
-        hover:text-white
-        transition-colors
-      "
-        >
-          Download
-        </a>
 
         <div className="h-[25px] w-[1px] bg-[#b3b3b3]"></div>
 
@@ -136,14 +124,13 @@ function Header() {
         transition-colors
       "
         >
-
           <SlArrowDownCircle className="w-[18px] h-[18px] object-contain text-[#b3b3b3] hover:text-white font-bold" />
 
           <span>Install App</span>
         </a>
 
         <a
-          href="signup.html"
+          href="/"
           className="
         text-[#b3b3b3]
         text-[14px]
@@ -156,26 +143,26 @@ function Header() {
           Sign up
         </a>
 
-        <a href="/">
+        <Link to="/Login">
           <button
             type="button"
             className="
-          h-[48px]
-          px-7
-          bg-white
-          text-black
-          rounded-full
-          text-[14px]
-          font-bold
-          cursor-pointer
-          transition-all duration-200
-          hover:scale-[1.04]
-          hover:bg-[#f0f0f0]
-        "
+            h-[48px]
+            px-7
+            bg-white
+            text-black
+            rounded-full
+            text-[14px]
+            font-bold
+            cursor-pointer
+            transition-all duration-200
+            hover:scale-[1.04]
+            hover:bg-[#f0f0f0]
+            "
           >
             Log in
           </button>
-        </a>
+        </Link>
       </div>
     </header>
   );
