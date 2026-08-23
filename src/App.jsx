@@ -5,6 +5,7 @@ import Sidebar from "./components/Sidebar/Sidebar";
 import Home from "./components/Pages/Home";
 import MusicPage from "./components/MusicPage/MusicPage";
 import Login from "./components/Pages/Login";
+import Signup from "./components/Pages/Signup";
 
 import "./App.css";
 
@@ -31,11 +32,10 @@ function App() {
         >
           <Routes>
             <Route path="/" element={<Home />} />
-
-            <Route path="/login" element={<Login />} /> 
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/login" element={<Login />} />
             <Route path="/music/:musicId" element={<MusicPage />} />
           </Routes>
-          
         </main>
       </div>
     </div>

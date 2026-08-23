@@ -114,6 +114,7 @@ function TrendingSongs() {
               <div
                 onClick={(event) => {
                   event.stopPropagation();
+                  navigate(`/music/${track.id}`);
                 }}
                 className="
                   absolute

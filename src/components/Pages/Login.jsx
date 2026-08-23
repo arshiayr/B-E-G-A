@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 
+
 import { FaSpotify } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { FaFacebook } from "react-icons/fa6";
@@ -7,14 +8,10 @@ import { FaApple } from "react-icons/fa";
 
 function Login() {
   return (
-    <body className="m-0 min-h-screen bg-[#0e0e0e] text-white">
+    <div className="m-0 min-h-screen bg-[#0e0e0e] text-white">
       <section className="flex min-h-screen w-full justify-center">
         <div className="w-full max-w-[450px] px-6">
           <div className="flex justify-center pt-[100px]">
-            {/* <img
-              src="./logo/Spotify.png"
-              alt="Spotify"
-              /> */}
             <FaSpotify className="h-12 w-[72px] cursor-default object-contain" />
           </div>
 
@@ -41,7 +38,7 @@ function Login() {
                         text-sm
                         font-bold
                     "
-              for="input"
+              htmlFor="input"
             >
               Email or username
             </label>
@@ -194,10 +191,6 @@ function Login() {
                             active:border-white/40
                         "
               >
-                {/* <img
-                    src="./logo/google.png"
-                    alt="Google"
-                    /> */}
                 <FcGoogle className="absoluteml-[-250px] h-[25px] w-[40px] object-contain" />
 
                 <p
@@ -242,10 +235,6 @@ function Login() {
                             active:border-white/40
                         "
               >
-                {/* <img
-                  src="./logo/Facebook2.png"
-                  alt="Facebook"
-                  /> */}
                 <FaFacebook className="absoluteml-[-250px] h-[25px] w-[40px] object-contain" />
 
                 <p
@@ -290,10 +279,6 @@ function Login() {
                             active:border-white/40
                         "
               >
-                {/* <img
-                  src="./logo/Apple2.png"
-                  alt="Apple"
-                  /> */}
                 <FaApple className="absoluteml-[-250px] h-[25px] w-[40px] object-contain" />
 
                 <p
@@ -323,7 +308,7 @@ function Login() {
                 Don't have an account?
               </p>
 
-              <a
+              <Link
                 className="
                             m-0
                             cursor-pointer
@@ -337,10 +322,10 @@ function Login() {
                             hover:text-white/80
                             active:text-white/50
                         "
-                href="./signup.html"
+                to="/signup"
               >
                 Sign up
-              </a>
+              </Link>
             </div>
 
             <div
@@ -399,7 +384,7 @@ function Login() {
           </form>
         </div>
       </section>
-    </body>
+    </div>
   );
 }
 

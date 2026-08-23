@@ -95,6 +95,7 @@ function Header() {
       <div className="ml-auto flex items-center gap-6 pr-4">
         {HeaderLinks.map((link) => (
           <a
+            key={link.lable}
             href={link.href}
             className="
           text-[#b3b3b3]
@@ -108,7 +109,6 @@ function Header() {
             {link.lable}
           </a>
         ))}
-
 
         <div className="h-[25px] w-[1px] bg-[#b3b3b3]"></div>
 
@@ -129,8 +129,8 @@ function Header() {
           <span>Install App</span>
         </a>
 
-        <a
-          href="/"
+        <Link
+          to="/signup"
           className="
         text-[#b3b3b3]
         text-[14px]
@@ -141,9 +141,9 @@ function Header() {
       "
         >
           Sign up
-        </a>
+        </Link>
 
-        <Link to="/Login">
+        <Link to="/login">
           <button
             type="button"
             className="

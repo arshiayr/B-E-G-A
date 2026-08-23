@@ -51,8 +51,9 @@ function PopularArtist() {
         </span>
       </div>
       <div className="flex">
-        {ArtistCart.map((link) => (
+        {ArtistCart.map((link, index) => (
           <div
+            key={index}
             className="
             group
             relative
