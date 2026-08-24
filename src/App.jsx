@@ -3,9 +3,10 @@ import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Home from "./components/Pages/Home";
-import MusicPage from "./components/MusicPage/MusicPage";
+// import MusicPage from "./components/MusicPage/MusicPage";
 import Login from "./components/Pages/Login";
 import Signup from "./components/Pages/Signup";
+import SecondHome from "./components/Second Home/SecondHome";
 
 import "./App.css";
 
@@ -34,7 +35,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/music/:musicId" element={<MusicPage />} />
+            <Route path="/music/:musicId" element={<SecondHome />} />
           </Routes>
         </main>
       </div>
