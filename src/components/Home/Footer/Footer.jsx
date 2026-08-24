@@ -61,6 +61,27 @@ function Footer() {
     },
   };
 
+  const socialLinks = [
+    {
+      name: "Instagram",
+      href: "https://instagram.com/spotify",
+      icon: FaInstagram,
+      ariaLabel: "Instagram",
+    },
+    {
+      name: "X",
+      href: "https://x.com/spotify",
+      icon: FaXTwitter,
+      ariaLabel: "X",
+    },
+    {
+      name: "Facebook",
+      href: "https://www.facebook.com/Spotify",
+      icon: FaFacebook,
+      ariaLabel: "Facebook",
+    },
+  ];
+
   return (
     <footer
       className="
@@ -269,8 +290,11 @@ function Footer() {
             shrink-0
           "
         >
-          <div
-            className="
+          {socialLinks.map((social) => {
+            const Icon = social.icon;
+            return (
+              <div
+                className="
               w-10
               h-10
               rounded-full
@@ -283,66 +307,19 @@ function Footer() {
               transition-all
               duration-200
               hover:scale-105
-            "
-          >
-            <FaInstagram
-              className="
-                w-5
-                h-5
-                text-white
               "
-            />
-          </div>
-
-          <div
-            className="
-              w-10
-              h-10
-              rounded-full
-              bg-[#1f1f1f]
-              flex
-              items-center
-              justify-center
-              cursor-pointer
-              hover:bg-[#2a2a2a]
-              transition-all
-              duration-200
-              hover:scale-105
-            "
-          >
-            <FaXTwitter
-              className="
-                w-5
-                h-5
-                text-white
-              "
-            />
-          </div>
-
-          <div
-            className="
-              w-10
-              h-10
-              rounded-full
-              bg-[#1f1f1f]
-              flex
-              items-center
-              justify-center
-              cursor-pointer
-              hover:bg-[#2a2a2a]
-              transition-all
-              duration-200
-              hover:scale-105
-            "
-          >
-            <FaFacebook
-              className="
-                w-5
-                h-5
-                text-white
-              "
-            />
-          </div>
+              >
+                <a
+                  href={social.href}
+                  title={social.name}
+                  aria-label={social.ariaLabel}
+                  className="w-10 h-10 bg-[#1f1f1f] rounded-full flex items-center justify-center hover:bg-[#2a2a2a] transition-colors text-gray-300 hover:text-white"
+                >
+                  <Icon className="w-5 h-5 text-white"/>
+                </a>
+              </div>
+            );
+          })}
         </div>
       </div>
 
@@ -361,7 +338,7 @@ function Footer() {
             text-[12px]
           "
         >
-          © 2026 Spotify AB
+          &copy; {new Date().getFullYear()} Spotify AB
         </span>
       </div>
     </footer>

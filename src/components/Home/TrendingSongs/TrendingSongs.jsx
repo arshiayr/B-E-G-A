@@ -73,7 +73,10 @@ function TrendingSongs() {
         {TrackCart.map((track) => (
           <div
             key={track.id}
-            onClick={() => navigate(`/music/${track.id}`)}
+            onClick={() => {
+              navigate(`/music/${track.id}`);
+              console.log("Clicked on song");
+            }}
             className="
               group
               relative
@@ -115,6 +118,7 @@ function TrendingSongs() {
                 onClick={(event) => {
                   event.stopPropagation();
                   navigate(`/music/${track.id}`);
+                  console.log("Clicked on play button");
                 }}
                 className="
                   absolute
