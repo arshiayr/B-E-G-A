@@ -2,9 +2,9 @@ import { IoMdPlay } from "react-icons/io";
 function PopularArtist() {
   const ArtistCart = [
     {
-      ArtistName: "M9",
+      ArtistName: "Nemzzz",
       ImgUrl:
-        "https://i.scdn.co/image/ab6761610000939b3ecaf8c1ff7ad3900d6ea01b",
+        "https://i.scdn.co/image/ab6761610000101f3a95a0b69711ff472a6d9644",
       rank: "Artist",
     },
     {

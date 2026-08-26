@@ -130,7 +130,7 @@ function Header() {
         </a>
 
         <Link
-          to="/signup"
+          to="signup"
           className="
         text-[#b3b3b3]
         text-[14px]
@@ -143,7 +143,7 @@ function Header() {
           Sign up
         </Link>
 
-        <Link to="/login">
+        <Link to="login">
           <button
             type="button"
             className="

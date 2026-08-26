@@ -6,11 +6,11 @@ import { BsThreeDots } from "react-icons/bs";
 
 const TrackCart = [
   {
-    id: "qalafi-1",
-    SongName: "Qalafi",
-    SingersName: "M9",
-    ImgUrl: "https://i.scdn.co/image/ab67616d0000e1a366cee195af09176657a1e795",
-    Duration: "3:45",
+    id: "Ego-1",
+    SongName: "Ego",
+    SingersName: "Nemzzz",
+    ImgUrl: "https://i.scdn.co/image/ab67616d0000e1a383d620da3370c23eedac7f43",
+    Duration: "1:55",
   },
 
   {
